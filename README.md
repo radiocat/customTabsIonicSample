@@ -41,10 +41,15 @@ $ npm install --save @ionic-native/splash-screen@^4.2.0
 $ npm install --save @ionic-native/status-bar@^4.2.0
 ```
 
-サンプルが動くか確認
-
-```bash
-$ ionic cordova run android
-```
 
 [Browser Tab](https://ionicframework.com/docs/native/browser-tab/) の実装をする
+
+[In App Browser](https://ionicframework.com/docs/native/in-app-browser/) をインストールして実装を追加
+
+```bash
+$ ionic cordova plugin add cordova-plugin-inappbrowser
+$ npm install --save @ionic-native/in-app-browser
+```
+
+
+

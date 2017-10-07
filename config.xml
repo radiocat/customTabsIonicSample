@@ -86,4 +86,5 @@
     <plugin name="ionic-plugin-keyboard" spec="^2.2.1" />
     <plugin name="cordova-plugin-browsertab" spec="^0.2.0" />
     <allow-navigation href="http://192.168.10.103:8100" />
+    <plugin name="cordova-plugin-inappbrowser" spec="^1.7.1" />
 </widget>

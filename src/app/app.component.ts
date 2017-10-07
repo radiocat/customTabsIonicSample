@@ -6,6 +6,7 @@ import { BrowserTab } from '@ionic-native/browser-tab';
 
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
+import { InAppBrowser } from '@ionic-native/in-app-browser';
 
 @Component({
   templateUrl: 'app.html'
@@ -17,16 +18,21 @@ export class MyApp {
 
   pages: Array<{title: string, component: any}>;
 
+  openUrl: string;
+
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen,
-      public browserTab: BrowserTab) {
+      public browserTab: BrowserTab, public iab: InAppBrowser) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage },
       { title: 'List', component: ListPage },
-      { title: 'Custom-Tabs', component: HomePage}
+      { title: 'CustomTabs', component: HomePage},
+      { title: 'InAppBrowser', component: HomePage}
     ];
+
+    this.openUrl = 'http://radiocat.hatenablog.com/';
 
   }
 
@@ -40,8 +46,11 @@ export class MyApp {
   }
 
   openPage(page) {
-    if(page.title === 'Custom-Tabs') {
+    if(page.title === 'CustomTabs') {
       this.openCustomTabs();
+      return;
+    } else if(page.title === 'InAppBrowser') {
+      this.openInAppBrowser();
       return;
     }
     // Reset the content nav to have just this page
@@ -55,15 +64,21 @@ export class MyApp {
 
         if (isAvailable) {
 
-          this.browserTab.openUrl('http://radiocat.hatenablog.com/');
+          this.browserTab.openUrl(this.openUrl);
 
         } else {
 
           // open URL with InAppBrowser instead or SafariViewController
+          this.openInAppBrowser();
 
         }
 
       });
+  }
+
+  openInAppBrowser() {
+    const browser = this.iab.create(this.openUrl);
+    browser.show();
   }
 
 }
