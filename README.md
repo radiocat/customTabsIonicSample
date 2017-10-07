@@ -26,7 +26,7 @@ Substitute ios for android if not on a Mac.
 
 # やったことメモ
 
-`cordova-plubin-browsertab` をインストールする
+[cordova-plubin-browsertab](https://github.com/google/cordova-plugin-browsertab) をインストールする
 
 ```bash
 $ ionic cordova plugin add cordova-plugin-browsertab
@@ -46,3 +46,5 @@ $ npm install --save @ionic-native/status-bar@^4.2.0
 ```bash
 $ ionic cordova run android
 ```
+
+[Browser Tab](https://ionicframework.com/docs/native/browser-tab/) の実装をする
