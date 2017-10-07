@@ -18,10 +18,31 @@ $ ionic start mySideMenu sidemenu
 Then, to run it, cd into `mySideMenu` and run:
 
 ```bash
-$ ionic cordova platform add ios
-$ ionic cordova run ios
+$ ionic cordova platform add android
+$ ionic cordova run android
 ```
 
 Substitute ios for android if not on a Mac.
 
+# やったことメモ
 
+`cordova-plubin-browsertab` をインストールする
+
+```bash
+$ ionic cordova plugin add cordova-plugin-browsertab
+$ npm install --save @ionic-native/browser-tab
+```
+
+依存関係で以下3つもバージョンを上げる
+
+```bash
+$ npm install --save @ionic-native/core@^4.2.0
+$ npm install --save @ionic-native/splash-screen@^4.2.0
+$ npm install --save @ionic-native/status-bar@^4.2.0
+```
+
+サンプルが動くか確認
+
+```bash
+$ ionic cordova run android
+```

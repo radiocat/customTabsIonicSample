@@ -20,11 +20,14 @@
         "@angular/http": "4.4.3",
         "@angular/platform-browser": "4.4.3",
         "@angular/platform-browser-dynamic": "4.4.3",
-        "@ionic-native/core": "3.12.1",
-        "@ionic-native/splash-screen": "3.12.1",
-        "@ionic-native/status-bar": "3.12.1",
+        "@ionic-native/browser-tab": "^4.3.0",
+        "@ionic-native/core": "^4.2.0",
+        "@ionic-native/splash-screen": "^4.2.0",
+        "@ionic-native/status-bar": "^4.2.0",
         "@ionic/storage": "2.0.1",
         "cordova-android": "^6.2.3",
+        "cordova-plugin-browsertab": "^0.2.0",
+        "cordova-plugin-compat": "^1.2.0",
         "cordova-plugin-device": "^1.1.4",
         "cordova-plugin-splashscreen": "^4.0.3",
         "cordova-plugin-statusbar": "^2.2.2",
@@ -47,7 +50,8 @@
             "cordova-plugin-splashscreen": {},
             "cordova-plugin-statusbar": {},
             "cordova-plugin-whitelist": {},
-            "ionic-plugin-keyboard": {}
+            "ionic-plugin-keyboard": {},
+            "cordova-plugin-browsertab": {}
         },
         "platforms": [
             "android"
